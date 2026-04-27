@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Box Carousel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">Hello</div>
+                <div class="num">01</div>
+                <img src="assets/Screenshot 2026-04-27 164415.png" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">I want to tell you something!</div>
+                <div class="num">02</div>
+                <img src="assets/gate.jpg" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">Please keep dragging</div>
+                <div class="num">03</div>
+                <img src="assets/pink.jpg" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">You are Amazing</div>
+                <div class="num">04</div>
+                <img src="assets/saree.jpg" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">Most Beautiful person</div>
+                <div class="num">05</div>
+                <img src="assets/saree3.jpg" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">And Cutest</div>
+                <div class="num">06</div>
+                <img src="assets/waterfall.jpg" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">And want to tell you one more thing</div>
+                <div class="num">07</div>
+                <img src="assets/Screenshot 2026-04-27 164244.png" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">Happy </div>
+                <div class="num">08</div>
+                <img src="assets/diwali.jpg" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">3rd day </div>
+                <div class="num">09</div>
+                <img src="assets/Screenshot 2026-04-27 164910.png" />
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-box">
+                <div class="title">of Birthweek</div>
+                <div class="num">10</div>
+                <img src="assets/Screenshot 2026-04-27 164729.png" />
+            </div>
+        </div>
+    </div>
+
+    <div class="layout">
+        <div class="box">
+            Hope you like it 
+        </div>
+    </div>
+
+    <div class="logo">🎁</div>
+
+    <div class="social">
+        <a href="#" target="_blank">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+        </a>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Restoring the gift change logic just in case it was needed
+        function changeGift() {
+            // This function could be used to highlight a random item in the carousel
+            const items = document.querySelectorAll('.carousel-item');
+            const randomIndex = Math.floor(Math.random() * items.length);
+            // We could trigger a click on a random item to center it
+            items[randomIndex].click();
+        }
+
+        // Add a click listener to the logo to trigger a random gift
+        document.querySelector('.logo').addEventListener('click', changeGift);
+    </script>
+</body>
+</html>
